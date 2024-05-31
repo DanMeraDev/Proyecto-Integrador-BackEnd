@@ -1,0 +1,82 @@
+[2024-05-27 20:10:32] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 20:10:44] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-05-27 20:10:44] [ WARN ] [PacienteDAOH2:51] La columna "APELLIDO" no permite valores nulos (NULL)
+NULL not allowed for column "APELLIDO"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES(?,?,?,?,?,?) [23502-224]
+[2024-05-27 20:13:50] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 20:29:51] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: null
+[2024-05-27 20:29:51] [ WARN ] [PacienteDAOH2:77] Cannot invoke "java.lang.Integer.intValue()" because "id" is null
+[2024-05-27 20:30:09] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-05-27 20:30:09] [ INFO ] [PacienteDAOH2:84] iniciando la operacion de actualizar del paciente: Daniel
+[2024-05-27 20:30:09] [ INFO ] [DomicilioDaoH2:67] Actualizando Domicilio: Domicilio{id=null, calle='Calle falsa', numero=1122334555, localidad='Ecuador', provincia='Pichincha'}
+[2024-05-27 20:30:09] [ WARN ] [PacienteDAOH2:100] Cannot invoke "java.lang.Integer.intValue()" because the return value of "BackEndProyecto.ClinicaOdontologica.model.Domicilio.getId()" is null
+[2024-05-27 20:34:06] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 20:34:11] [ INFO ] [PacienteDAOH2:112] iniciando la busqueda de todos los pacientes
+[2024-05-27 20:36:04] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 20:37:34] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 20:37:42] [ INFO ] [PacienteDAOH2:112] iniciando la busqueda de todos los pacientes
+[2024-05-27 20:37:53] [ INFO ] [PacienteDAOH2:112] iniciando la busqueda de todos los pacientes
+[2024-05-27 20:38:26] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 20:41:05] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 20:41:16] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 20:44:07] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 20:45:23] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 20:45:28] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-05-27 20:50:43] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 20:51:03] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 20:51:27] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-05-27 20:51:27] [ INFO ] [PacienteDAOH2:107] iniciando la operación de eliminar al paciente con id: 1
+[2024-05-27 20:51:38] [ INFO ] [PacienteDAOH2:121] iniciando la busqueda de todos los pacientes
+[2024-05-27 20:53:18] [ INFO ] [PacienteDAOH2:121] iniciando la busqueda de todos los pacientes
+[2024-05-27 21:02:28] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-05-27 21:02:28] [ WARN ] [PacienteDAOH2:51] La columna "APELLIDO" no permite valores nulos (NULL)
+NULL not allowed for column "APELLIDO"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES(?,?,?,?,?,?) [23502-224]
+[2024-05-27 21:02:29] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-05-27 21:02:29] [ WARN ] [PacienteDAOH2:51] La columna "APELLIDO" no permite valores nulos (NULL)
+NULL not allowed for column "APELLIDO"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES(?,?,?,?,?,?) [23502-224]
+[2024-05-27 21:02:29] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-05-27 21:02:29] [ WARN ] [PacienteDAOH2:51] La columna "APELLIDO" no permite valores nulos (NULL)
+NULL not allowed for column "APELLIDO"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES(?,?,?,?,?,?) [23502-224]
+[2024-05-27 21:02:30] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-05-27 21:02:30] [ WARN ] [PacienteDAOH2:51] La columna "APELLIDO" no permite valores nulos (NULL)
+NULL not allowed for column "APELLIDO"; SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EMAIL) VALUES(?,?,?,?,?,?) [23502-224]
+[2024-05-27 21:02:49] [ INFO ] [PacienteDAOH2:121] iniciando la busqueda de todos los pacientes
+[2024-05-27 21:03:40] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 21:05:14] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 21:06:06] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 22:48:25] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 22:49:02] [ INFO ] [BD:30] tabla creada con exito
+[2024-05-27 22:49:18] [ INFO ] [PacienteDAOH2:121] iniciando la busqueda de todos los pacientes
+[2024-05-27 22:49:29] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-05-27 22:50:56] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-05-27 22:50:56] [ INFO ] [PacienteDAOH2:107] iniciando la operación de eliminar al paciente con id: 1
+[2024-05-27 22:51:09] [ INFO ] [PacienteDAOH2:121] iniciando la busqueda de todos los pacientes
+[2024-05-29 20:12:48] [ WARN ] [BD:37] Error de Sintaxis en sentencia SQL "CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, MATRICULA VARCHAR(100) NOT NULL, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL[*]"; se esperaba "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, MATRICULA VARCHAR(100) NOT NULL, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL[*]"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE ODONTOLOGOS (ID INT AUTO_INCREMENT PRIMARY KEY, MATRICULA VARCHAR(100) NOT NULL, NOMBRE VARCHAR(100) NOT NULL, APELLIDO VARCHAR(100) NOT NULL [42001-224]
+[2024-05-29 20:15:17] [ WARN ] [BD:37] Tabla "ODONGOLOGOS" no encontrada
+Table "ODONGOLOGOS" not found; SQL statement:
+INSERT INTO ODONGOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES ('ABC10', 'CAROL', 'VELEZ'),('ABC20', 'ADRIANA', 'ROMERO') [42102-224]
+[2024-05-29 20:16:04] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-29 20:21:36] [ INFO ] [PacienteDAOH2:121] iniciando la busqueda de todos los pacientes
+[2024-05-29 20:22:12] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-05-29 20:22:12] [ INFO ] [PacienteDAOH2:47] paciente guardado con exito
+[2024-05-29 20:22:20] [ INFO ] [PacienteDAOH2:121] iniciando la busqueda de todos los pacientes
+[2024-05-29 20:26:09] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-29 20:28:47] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-29 20:28:52] [ INFO ] [OdontologoDaoH2:21] iniciando las operaciones de : Guardado de :Jose
+[2024-05-29 20:29:47] [ INFO ] [OdontologoDaoH2:42] iniciando las operaciones de : busqueda De un Odontologo con id:  2
+[2024-05-29 20:29:51] [ INFO ] [OdontologoDaoH2:42] iniciando las operaciones de : busqueda De un Odontologo con id:  1
+[2024-05-29 20:29:59] [ INFO ] [OdontologoDaoH2:42] iniciando las operaciones de : busqueda De un Odontologo con id:  3
+[2024-05-29 20:30:09] [ INFO ] [PacienteDAOH2:121] iniciando la busqueda de todos los pacientes
+[2024-05-29 20:31:52] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 2
+[2024-05-29 20:31:52] [ INFO ] [OdontologoDaoH2:42] iniciando las operaciones de : busqueda De un Odontologo con id:  3
+[2024-05-29 20:31:52] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 2
+[2024-05-29 20:31:52] [ INFO ] [OdontologoDaoH2:42] iniciando las operaciones de : busqueda De un Odontologo con id:  3
+[2024-05-29 21:40:05] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-29 21:46:03] [ INFO ] [BD:34] tabla creada con exito
+[2024-05-29 22:45:16] [ INFO ] [BD:34] tabla creada con exito
