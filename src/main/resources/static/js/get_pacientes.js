@@ -3,7 +3,7 @@ window.addEventListener('load', function () {
 
         //con fetch invocamos a la API de pacientes con el método GET
         //nos devolverá un JSON con una lista de pacientes
-        const url = '/pacientes';
+        const url = '/paciente';
         const settings = {
             method: 'GET'
         }
@@ -13,7 +13,6 @@ window.addEventListener('load', function () {
             .then(data => {
                 //recorremos la colección de pacientes del JSON
                 for(paciente of data){
-                    console.log(paciente.id)
                     //por cada pelicula armaremos una fila de la tabla
                     //cada fila tendrá un id que luego nos permitirá borrar la fila si eliminamos la pelicula
                     var table = document.getElementById("pacienteTable");
@@ -46,10 +45,10 @@ window.addEventListener('load', function () {
                     pacienteRow.innerHTML = '<td>' + updateButton + '</td>' +
                         '<td class=\"td_nombre\">' + paciente.nombre.toUpperCase() + '</td>' +
                         '<td class=\"td_apellido\">' + paciente.apellido.toUpperCase() + '</td>' +
-                        '<td class=\"td_cedula\">' + paciente.cedula.toUpperCase() + '</td>' +
-                        '<td class=\"td_fechaIngreso\">' + paciente.fechaIngreso.toUpperCase() + '</td>' +
-                        '<td class=\"td_domicilio\">' + paciente.domicilio.toUpperCase() + '</td>' +
-                        '<td class=\"td_email\">' + paciente.email.toUpperCase() + '</td>' +
+                        '<td class=\"td_cedula\">' + paciente.cedula + '</td>' +
+                        '<td class=\"td_fechaIngreso\">' + paciente.fechaIngreso + '</td>' +
+                        '<td class=\"td_domicilio\">' + paciente.domicilio.calle+ '</td>' +
+                        '<td class=\"td_email\">' + paciente.email + '</td>' +
 
                         '<td>' + deleteButton + '</td>';
 

@@ -57,7 +57,7 @@ public class PacienteController {
         return ResponseEntity.ok(pacienteService.buscarPaciente(id));
     }
 
-    @DeleteMapping("/eliminar/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarPaciente(@PathVariable int id) {
         Paciente pacienteBuscado = pacienteService.buscarPaciente(id);
         if (pacienteBuscado != null) {
