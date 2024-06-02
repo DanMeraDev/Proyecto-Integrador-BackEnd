@@ -74,6 +74,7 @@ public class DomicilioDaoH2 implements iDao<Domicilio>{
             psUpdate.setString(3,domicilio.getLocalidad());
             psUpdate.setString(4,domicilio.getProvincia());
             psUpdate.setInt(5,domicilio.getId());
+            psUpdate.execute();
         } catch (Exception e) {
             e.printStackTrace();
         }
