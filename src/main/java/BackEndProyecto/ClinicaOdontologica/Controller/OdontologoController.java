@@ -31,17 +31,18 @@ public class OdontologoController {
     }
 
     @PutMapping
-    public ResponseEntity<String> actualizarOdontologo(Odontologo odontologo) {
+    public ResponseEntity<String> actualizarOdontologo(@RequestBody Odontologo odontologo) {
         Odontologo odontologoBusqueda = odontologoService.buscarPorId(odontologo.getId());
         if (odontologoBusqueda!=null) {
-            odontologoService.actualizarOdontologo(odontologoBusqueda);
+            odontologoService.actualizarOdontologo(odontologo);
             return ResponseEntity.ok().body("Se actualizó correctamente");
         }
         return ResponseEntity.badRequest().body("Odontólogo no encontrado");
     }
 
-    @DeleteMapping
-    public ResponseEntity<String> eliminarOdontologo(int id) {
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> eliminarOdontologo(@PathVariable int id) {
         Odontologo odontologoBusqueda = odontologoService.buscarPorId(id);
         if(odontologoBusqueda!=null){
             odontologoService.eliminarOdontologo(id);
