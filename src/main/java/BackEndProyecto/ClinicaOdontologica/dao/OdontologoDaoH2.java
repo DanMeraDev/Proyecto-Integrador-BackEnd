@@ -15,11 +15,11 @@ public class OdontologoDaoH2 implements iDao<Odontologo> {
     private static final String SQL_INSERT="INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES(?,?,?)";
     private static final String SQL_SELECT_ONE="SELECT * FROM ODONTOLOGOS  WHERE ID=?";
     private static final String SQL_SELECT_ALL="SELECT * FROM ODONTOLOGOS";
-    private static final String SQL_UPDATE=" UPDATE ODONTOLOGOS SET MATRICULA=?, NOMBRE=?, APELLIDO=? WHERE ID=?";
+    private static final String SQL_UPDATE="UPDATE ODONTOLOGOS SET MATRICULA=?, NOMBRE=?, APELLIDO=? WHERE ID=?";
     private static final String SQL_DELETE="DELETE FROM ODONTOLOGOS WHERE ID=?";
     @Override
     public Odontologo guardar(Odontologo odontologo) {
-        logger.info("iniciando las operaciones de : Guardado de :"+odontologo.getNombre());
+        logger.info("iniciando las operaciones de Guardado de ondontologo: "+odontologo.getNombre());
         Connection connection=null;
         try{
             connection=BD.getConnection();
@@ -40,7 +40,7 @@ public class OdontologoDaoH2 implements iDao<Odontologo> {
 
     @Override
     public Odontologo buscarPorID(Integer id) {
-        logger.info("iniciando las operaciones de : busqueda De un Odontologo con id:  "+id);
+        logger.info("iniciando las operaciones de busqueda De un Odontologo con id:  "+id);
         Connection connection=null;
         Odontologo odontologo= null;
         try{
@@ -60,7 +60,7 @@ public class OdontologoDaoH2 implements iDao<Odontologo> {
 
     @Override
     public void actualizar(Odontologo odontologo) {
-        logger.info("iniciando las operaciones de : ");
+        logger.info("iniciando las operaciones de actualizar odontologo con el id: " + odontologo.getId());
         Connection connection=null;
         try{
             connection=BD.getConnection();
@@ -69,7 +69,8 @@ public class OdontologoDaoH2 implements iDao<Odontologo> {
             psUpdate.setString(2, odontologo.getNombre());
             psUpdate.setString(3, odontologo.getApellido());
             psUpdate.setInt(4, odontologo.getId());
-            psUpdate.execute();
+            psUpdate.executeUpdate();
+            logger.info("Actualizado correctamente");
         }catch (Exception e){
             logger.error(e.getMessage());
         }
@@ -78,7 +79,7 @@ public class OdontologoDaoH2 implements iDao<Odontologo> {
 
     @Override
     public void eliminar(Integer id) {
-        logger.info("iniciando las operaciones de : ");
+        logger.info("iniciando las operaciones de eliminar odontologo con id: "+id);
         Connection connection=null;
         try{
             connection=BD.getConnection();
@@ -93,7 +94,7 @@ public class OdontologoDaoH2 implements iDao<Odontologo> {
 
     @Override
     public List<Odontologo> buscarTodos() {
-        logger.info("iniciando las operaciones de : ");
+        logger.info("iniciando las operaciones de buscar todos los odontólgos ");
         Connection connection=null;
         List<Odontologo> odontologoList = new ArrayList<>();
         try{
