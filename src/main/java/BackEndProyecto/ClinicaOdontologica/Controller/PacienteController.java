@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/paciente")
 public class PacienteController {
-    private PacienteService pacienteService;
+    private final PacienteService pacienteService;
 
     public PacienteController() {
         pacienteService= new PacienteService();
@@ -52,12 +52,12 @@ public class PacienteController {
         return ResponseEntity.ok(pacienteService.buscarTodos());
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Paciente> buscarPaciente(@PathVariable int id) {
         return ResponseEntity.ok(pacienteService.buscarPaciente(id));
     }
 
-    @DeleteMapping("/eliminar/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarPaciente(@PathVariable int id) {
         Paciente pacienteBuscado = pacienteService.buscarPaciente(id);
         if (pacienteBuscado != null) {

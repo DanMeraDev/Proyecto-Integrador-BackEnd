@@ -80,6 +80,7 @@ INSERT INTO ODONGOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES ('ABC10', 'CAROL', 
 [2024-05-29 21:40:05] [ INFO ] [BD:34] tabla creada con exito
 [2024-05-29 21:46:03] [ INFO ] [BD:34] tabla creada con exito
 [2024-05-29 22:45:16] [ INFO ] [BD:34] tabla creada con exito
+[2024-06-01 21:18:00] [ INFO ] [BD:37] tabla creada con exito
 [2024-05-31 20:52:02] [ INFO ] [BD:34] tabla creada con exito
 [2024-05-31 20:52:10] [ INFO ] [OdontologoDaoH2:96] iniciando las operaciones de : 
 [2024-05-31 20:55:41] [ WARN ] [BD:37] La base de datos puede que ya esté siendo utilizada: "/home/daniel/C2ClinicaOdontologica.mv.db". Soluciones Posibles: cierre todas las otras conexiones; use el modo server
@@ -542,3 +543,33 @@ Database may be already in use: "/home/daniel/C2ClinicaOdontologica.mv.db". Poss
 [2024-06-01 20:19:31] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  2
 [2024-06-01 20:19:35] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
 [2024-06-01 20:19:43] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-02 20:26:37] [ WARN ] [BD:41] Error de Sintaxis en sentencia SQL "INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES ('ABC10', 'CAROL', 'VELEZ'),('ABC20', 'ADRIANA', 'ROMERO') [*]+INSERT INTO TURNOS (PACIENTE_ID, ODONTOLOGO_ID, FECHA_TURNO) VALUES ('1', '1', '2025-03-12'),('2', '2', '2021-12-12')"
+Syntax error in SQL statement "INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES ('ABC10', 'CAROL', 'VELEZ'),('ABC20', 'ADRIANA', 'ROMERO') [*]+INSERT INTO TURNOS (PACIENTE_ID, ODONTOLOGO_ID, FECHA_TURNO) VALUES ('1', '1', '2025-03-12'),('2', '2', '2021-12-12')"; SQL statement:
+INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES ('ABC10', 'CAROL', 'VELEZ'),('ABC20', 'ADRIANA', 'ROMERO') +INSERT INTO TURNOS (PACIENTE_ID, ODONTOLOGO_ID, FECHA_TURNO) VALUES ('1', '1', '2025-03-12'),('2', '2', '2021-12-12') [42000-224]
+[2024-06-02 20:26:52] [ INFO ] [BD:38] tabla creada con exito
+[2024-06-02 20:27:12] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-02 20:27:12] [ WARN ] [TurnosDaoLista:127] Cannot invoke "BackEndProyecto.ClinicaOdontologica.model.Turno.getPaciente()" because "turno" is null
+[2024-06-02 20:32:00] [ INFO ] [BD:38] tabla creada con exito
+[2024-06-02 20:32:04] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-02 20:32:14] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
+[2024-06-02 20:40:06] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
+[2024-06-02 20:40:27] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
+[2024-06-02 20:46:19] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-02 20:46:19] [ WARN ] [TurnosDaoLista:127] Cannot invoke "BackEndProyecto.ClinicaOdontologica.model.Turno.getPaciente()" because "turno" is null
+[2024-06-02 20:47:47] [ INFO ] [BD:38] tabla creada con exito
+[2024-06-02 20:47:52] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-02 20:47:52] [ WARN ] [TurnosDaoLista:128] Cannot invoke "BackEndProyecto.ClinicaOdontologica.model.Turno.getPaciente()" because "turno" is null
+[2024-06-02 20:48:25] [ INFO ] [BD:38] tabla creada con exito
+[2024-06-02 20:48:35] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-02 20:48:35] [ WARN ] [TurnosDaoLista:128] Cannot invoke "BackEndProyecto.ClinicaOdontologica.model.Turno.getPaciente()" because "turno" is null
+[2024-06-02 20:49:03] [ INFO ] [BD:38] tabla creada con exito
+[2024-06-02 20:49:06] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-02 20:49:06] [ INFO ] [TurnosDaoLista:118] turnos buscados correctamente
+[2024-06-02 20:49:06] [ WARN ] [TurnosDaoLista:128] Cannot invoke "BackEndProyecto.ClinicaOdontologica.model.Turno.getPaciente()" because "turno" is null
+[2024-06-02 20:50:13] [ INFO ] [BD:38] tabla creada con exito
+[2024-06-02 20:50:18] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-02 20:50:18] [ INFO ] [TurnosDaoLista:118] turnos buscados correctamente
+[2024-06-02 20:50:18] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-02 20:50:18] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-02 20:50:18] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 2
+[2024-06-02 20:50:18] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  2

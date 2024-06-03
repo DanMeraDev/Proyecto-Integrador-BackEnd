@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/odontologos")
 public class OdontologoController {
-    private OdontologoService odontologoService;
+    private final OdontologoService odontologoService;
 
     public OdontologoController() {
         odontologoService= new OdontologoService();

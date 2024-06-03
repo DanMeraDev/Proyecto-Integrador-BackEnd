@@ -61,7 +61,6 @@ public class PacienteDAOH2 implements iDao<Paciente> {
         Domicilio domicilio = null;
         try {
             connection = BD.getConnection();
-            Statement statement = connection.createStatement();
             PreparedStatement psSelectOne = connection.prepareStatement(SQL_SELECT_ONE);
             psSelectOne.setInt(1, id);
             ResultSet rs = psSelectOne.executeQuery();

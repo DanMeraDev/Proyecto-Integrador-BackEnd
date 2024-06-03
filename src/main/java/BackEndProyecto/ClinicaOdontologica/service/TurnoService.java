@@ -1,5 +1,6 @@
 package BackEndProyecto.ClinicaOdontologica.service;
 
+import BackEndProyecto.ClinicaOdontologica.dao.TurnosDaoH2;
 import BackEndProyecto.ClinicaOdontologica.dao.TurnosDaoLista;
 import BackEndProyecto.ClinicaOdontologica.dao.iDao;
 import BackEndProyecto.ClinicaOdontologica.model.Turno;
@@ -10,7 +11,7 @@ public class TurnoService {
     private iDao<Turno> turnoiDao;
 
     public TurnoService() {
-        turnoiDao = new TurnosDaoLista();
+        turnoiDao = new TurnosDaoH2();
     }
     public Turno guardarTurno(Turno turno) {
         return turnoiDao.guardar(turno);
