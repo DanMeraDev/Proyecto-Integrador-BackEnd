@@ -573,3 +573,143 @@ INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES ('ABC10', 'CAROL', 
 [2024-06-02 20:50:18] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
 [2024-06-02 20:50:18] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 2
 [2024-06-02 20:50:18] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  2
+[2024-06-02 20:57:47] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
+[2024-06-02 20:58:03] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
+[2024-06-02 20:58:06] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-06-02 20:58:06] [ INFO ] [PacienteDAOH2:47] paciente guardado con exito
+[2024-06-02 20:58:11] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-06-02 20:58:11] [ INFO ] [PacienteDAOH2:47] paciente guardado con exito
+[2024-06-02 20:58:20] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-06-02 20:58:20] [ INFO ] [PacienteDAOH2:47] paciente guardado con exito
+[2024-06-02 20:58:30] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: null
+[2024-06-02 20:58:30] [ WARN ] [PacienteDAOH2:76] Cannot invoke "java.lang.Integer.intValue()" because "id" is null
+[2024-06-03 13:18:49] [ INFO ] [BD:38] tabla creada con exito
+[2024-06-03 13:40:15] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-03 13:40:15] [ INFO ] [TurnosDaoLista:118] turnos buscados correctamente
+[2024-06-03 13:40:15] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 13:40:15] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 13:40:15] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 2
+[2024-06-03 13:40:15] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  2
+[2024-06-03 13:40:38] [ INFO ] [TurnosDaoLista:49] inciando la busqueda de un paciente por id: 1
+[2024-06-03 13:40:38] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 13:40:38] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 13:41:29] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 13:41:29] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 13:41:29] [ INFO ] [TurnosDaoLista:22] inciando la operacion de guardado de turno
+[2024-06-03 13:41:29] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-06-03 13:41:29] [ INFO ] [PacienteDAOH2:47] paciente guardado con exito
+[2024-06-03 13:41:29] [ INFO ] [OdontologoDaoH2:22] iniciando las operaciones de Guardado de ondontologo: CAROL
+[2024-06-03 13:41:29] [ INFO ] [TurnosDaoLista:39] Turno asignado con éxito
+[2024-06-03 13:41:39] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-03 13:41:39] [ INFO ] [TurnosDaoLista:118] turnos buscados correctamente
+[2024-06-03 13:41:39] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 13:41:39] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 13:41:39] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 2
+[2024-06-03 13:41:39] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  2
+[2024-06-03 13:41:39] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 3
+[2024-06-03 13:41:39] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  3
+[2024-06-03 13:43:42] [ INFO ] [TurnosDaoLista:49] inciando la busqueda de un paciente por id: 3
+[2024-06-03 13:43:42] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 3
+[2024-06-03 13:43:42] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  3
+[2024-06-03 13:43:42] [ INFO ] [TurnosDaoLista:94] iniciando la operación de eliminar el turno con id: 3
+[2024-06-03 13:43:47] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-03 13:43:47] [ INFO ] [TurnosDaoLista:118] turnos buscados correctamente
+[2024-06-03 13:43:47] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 13:43:47] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 13:43:47] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 2
+[2024-06-03 13:43:47] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  2
+[2024-06-03 13:54:16] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 13:54:16] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 13:54:16] [ INFO ] [TurnosDaoLista:22] inciando la operacion de guardado de turno
+[2024-06-03 13:54:16] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-06-03 13:54:16] [ WARN ] [PacienteDAOH2:51] Cannot invoke "java.time.LocalDate.getYear()" because "date" is null
+[2024-06-03 13:54:16] [ INFO ] [OdontologoDaoH2:22] iniciando las operaciones de Guardado de ondontologo: CAROL
+[2024-06-03 13:54:16] [ INFO ] [TurnosDaoLista:39] Turno asignado con éxito
+[2024-06-03 14:01:30] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 14:01:30] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 14:01:30] [ INFO ] [TurnosDaoLista:22] inciando la operacion de guardado de turno
+[2024-06-03 14:01:30] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-06-03 14:01:30] [ WARN ] [PacienteDAOH2:51] Cannot invoke "java.time.LocalDate.getYear()" because "date" is null
+[2024-06-03 14:01:30] [ INFO ] [OdontologoDaoH2:22] iniciando las operaciones de Guardado de ondontologo: CAROL
+[2024-06-03 14:01:30] [ INFO ] [TurnosDaoLista:39] Turno asignado con éxito
+[2024-06-03 14:01:41] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 14:01:41] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 14:01:41] [ INFO ] [TurnosDaoLista:22] inciando la operacion de guardado de turno
+[2024-06-03 14:01:41] [ INFO ] [PacienteDAOH2:29] inicando la operacion de guardado
+[2024-06-03 14:01:41] [ INFO ] [PacienteDAOH2:47] paciente guardado con exito
+[2024-06-03 14:01:41] [ INFO ] [OdontologoDaoH2:22] iniciando las operaciones de Guardado de ondontologo: CAROL
+[2024-06-03 14:01:41] [ INFO ] [TurnosDaoLista:39] Turno asignado con éxito
+[2024-06-03 14:02:41] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 14:03:02] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 14:03:02] [ INFO ] [OdontologoDaoH2:63] iniciando las operaciones de actualizar odontologo con el id: 1
+[2024-06-03 14:03:02] [ INFO ] [OdontologoDaoH2:73] Actualizado correctamente
+[2024-06-03 14:03:20] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 14:03:29] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
+[2024-06-03 14:03:50] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
+[2024-06-03 14:04:08] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
+[2024-06-03 14:04:19] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 14:04:19] [ INFO ] [PacienteDAOH2:83] iniciando la operacion de actualizar del paciente: Jorgito
+[2024-06-03 14:04:19] [ INFO ] [DomicilioDaoH2:67] Actualizando Domicilio: Domicilio{id=1, calle='Siempre viva', numero=742, localidad='Springfield', provincia='USA'}
+[2024-06-03 14:04:23] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
+[2024-06-03 14:07:21] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
+[2024-06-03 14:07:45] [ INFO ] [BD:38] tabla creada con exito
+[2024-06-03 14:07:53] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
+[2024-06-03 14:08:02] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 2
+[2024-06-03 14:08:02] [ INFO ] [PacienteDAOH2:83] iniciando la operacion de actualizar del paciente: Jorgito
+[2024-06-03 14:08:02] [ INFO ] [DomicilioDaoH2:67] Actualizando Domicilio: Domicilio{id=1, calle='Siempre viva', numero=742, localidad='Springfield', provincia='USA'}
+[2024-06-03 14:08:04] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
+[2024-06-03 14:45:05] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-03 14:45:05] [ INFO ] [TurnosDaoLista:118] turnos buscados correctamente
+[2024-06-03 14:45:05] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 14:45:05] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 14:45:05] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 2
+[2024-06-03 14:45:05] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  2
+[2024-06-03 14:45:26] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-03 14:45:26] [ INFO ] [TurnosDaoLista:118] turnos buscados correctamente
+[2024-06-03 14:45:26] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 14:45:26] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 14:45:26] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 2
+[2024-06-03 14:45:26] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  2
+[2024-06-03 14:45:32] [ INFO ] [TurnosDaoLista:49] inciando la busqueda de un paciente por id: 1
+[2024-06-03 14:45:32] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 14:45:32] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 14:45:32] [ INFO ] [TurnosDaoLista:75] iniciando la operacion de actualizar el turno con id:1
+[2024-06-03 14:45:32] [ INFO ] [OdontologoDaoH2:63] iniciando las operaciones de actualizar odontologo con el id: 1
+[2024-06-03 14:45:32] [ INFO ] [OdontologoDaoH2:73] Actualizado correctamente
+[2024-06-03 14:45:32] [ INFO ] [TurnosDaoLista:86] Actualización generada con éxito
+[2024-06-03 14:45:41] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-03 14:45:41] [ INFO ] [TurnosDaoLista:118] turnos buscados correctamente
+[2024-06-03 14:45:41] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 14:45:41] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 14:45:41] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 2
+[2024-06-03 14:45:41] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  2
+[2024-06-03 14:46:01] [ INFO ] [TurnosDaoLista:49] inciando la busqueda de un paciente por id: 1
+[2024-06-03 14:46:01] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 14:46:01] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 14:46:01] [ INFO ] [TurnosDaoLista:75] iniciando la operacion de actualizar el turno con id:1
+[2024-06-03 14:46:01] [ INFO ] [OdontologoDaoH2:63] iniciando las operaciones de actualizar odontologo con el id: 1
+[2024-06-03 14:46:01] [ INFO ] [OdontologoDaoH2:73] Actualizado correctamente
+[2024-06-03 14:46:01] [ INFO ] [TurnosDaoLista:86] Actualización generada con éxito
+[2024-06-03 14:46:06] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
+[2024-06-03 14:46:06] [ INFO ] [TurnosDaoLista:118] turnos buscados correctamente
+[2024-06-03 14:46:06] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
+[2024-06-03 14:46:06] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  1
+[2024-06-03 14:46:06] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 2
+[2024-06-03 14:46:06] [ INFO ] [OdontologoDaoH2:43] iniciando las operaciones de busqueda De un Odontologo con id:  2
+[2024-06-03 16:03:47] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:03:54] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:03:57] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:04:01] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:04:06] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:04:18] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:04:38] [ INFO ] [BD:38] tabla creada con exito
+[2024-06-03 16:04:41] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:06:05] [ INFO ] [BD:38] tabla creada con exito
+[2024-06-03 16:06:08] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:06:12] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:06:21] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:06:37] [ INFO ] [BD:38] tabla creada con exito
+[2024-06-03 16:06:44] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:06:52] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:06:55] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
+[2024-06-03 16:07:38] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 

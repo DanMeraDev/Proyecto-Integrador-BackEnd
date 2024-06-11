@@ -42,8 +42,8 @@
                         Pacientes
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Guardar</a></li>
-                        <li><a class="dropdown-item" href="#">Listar</a></li>
+                        <li><a class="dropdown-item" href="./post_pacientes.html">Guardar</a></li>
+                        <li><a class="dropdown-item" href="./get_pacientes.html">Listar</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -60,8 +60,8 @@
                         Turnos
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Guardar</a></li>
-                        <li><a class="dropdown-item" href="#">Listar</a></li>
+                        <li><a class="dropdown-item" href="./post_turnos.html">Guardar</a></li>
+                        <li><a class="dropdown-item" href="./get_turnos.html">Listar</a></li>
                     </ul>
                 </li>
             </ul>
@@ -73,27 +73,27 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <h1 class="mb-2 bread">Odontólogos</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Odontologós <i class="ion-ios-arrow-forward"></i></span><span>Listar <i class="ion-ios-arrow-forward"></i></span></p>
+                <h1 class="mb-2 bread">Turnos</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Turnos <i class="ion-ios-arrow-forward"></i></span><span>Listar <i class="ion-ios-arrow-forward"></i></span></p>
             </div>
         </div>
     </div>
 </section>
 <div class="container">
-    <div id="div_odontologo_table">
-        <h1>Listado de Odontologos</h1>
+    <div id="div_turno_table">
+        <h1>Listado de Turnos</h1>
         <div class="row col-md-6 table-responsive">
-            <table id="odontologoTable" class="table table-striped">
+            <table id="turnoTable" class="table table-striped">
                 <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Matricula</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
+                    <th>Paciente</th>
+                    <th>Odontologo</th>
+                    <th>Fecha</th>
                     <th></th>
                 </tr>
                 </thead>
-                <tbody id="OdontologoTableBody">
+                <tbody id="turnoTableBody">
 
                 </tbody>
             </table>
@@ -102,23 +102,23 @@
     <div class="row">
         <div class="col-sm-6" style="display: none;
 											background-color:#e6fffa; padding:10px; border-radius:3px"
-             id="div_odontologo_updating">
-            <form id="update_odontologo_form">
+             id="div_turno_updating">
+            <form id="update_turno_form">
                 <div class="form-group">
                     <label >Id:</label>
-                    <input type="text" class="form-control" id="odontologo_id" readonly>
+                    <input type="text" class="form-control" id="turno_id" readonly>
                 </div>
                 <div class="form-group">
-                    <label >Matricula:</label>
-                    <input type="text" class="form-control" placeholder="matricula" id="matricula">
+                    <label >Paciente:</label>
+                    <input type="text" class="form-control" placeholder="paciente" id="paciente">
                 </div>
                 <div class="form-group">
-                    <label >Nombre:</label>
-                    <input type="text" class="form-control" placeholder="nombre" id="nombre">
+                    <label >Odontologo:</label>
+                    <input type="text" class="form-control" placeholder="odontologo" id="odontologo">
                 </div>
                 <div class="form-group">
-                    <label >Apellido:</label>
-                    <input type="text" class="form-control" placeholder="apellido" id="apellido">
+                    <label >Fecha:</label>
+                    <input type="text" class="form-control" placeholder="fecha" id="fecha">
                 </div>
 
 
@@ -150,9 +150,9 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/js/google-map.js"></script>
 <script src="js/js/main.js"></script>
-<script type="text/javascript" src="js/get_odontologos.js"></script>
-<script type="text/javascript" src="js/update_odontologos.js"></script>
-<script type="text/javascript" src="js/delete_odontologos.js"></script>
+<script type="text/javascript" src="js/get_turnos.js"></script>
+<script type="text/javascript" src="js/update_turnos.js"></script>
+<script type="text/javascript" src="js/delete_turnos.js"></script>
 
 </body>
 </html>
