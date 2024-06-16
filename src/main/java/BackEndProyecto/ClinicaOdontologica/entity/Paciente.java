@@ -1,9 +1,15 @@
-package BackEndProyecto.ClinicaOdontologica.model;
+package BackEndProyecto.ClinicaOdontologica.entity;
+
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import BackEndProyecto.ClinicaOdontologica.model.Domicilio;
+
+@Entity
+@Table(name = "pacientes")
 public class Paciente {
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nombre;
     private String apellido;
     private String cedula;
@@ -11,29 +17,8 @@ public class Paciente {
     private Domicilio domicilio;
     private String email;
 
-    public Paciente() {
-    }
 
-    public Paciente(String nombre, String apellido, String cedula, LocalDate fechaIngreso, Domicilio domicilio, String email) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.cedula = cedula;
-        this.fechaIngreso = fechaIngreso;
-        this.domicilio = domicilio;
-        this.email= email;
-    }
-
-    public Paciente(Integer id, String nombre, String apellido, String cedula, LocalDate fechaIngreso, Domicilio domicilio, String email) {
-        this.id = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.cedula = cedula;
-        this.fechaIngreso = fechaIngreso;
-        this.domicilio = domicilio;
-        this.email= email;
-    }
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
@@ -57,7 +42,7 @@ public class Paciente {
         return domicilio;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

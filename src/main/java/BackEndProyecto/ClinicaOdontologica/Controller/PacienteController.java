@@ -1,14 +1,14 @@
 package BackEndProyecto.ClinicaOdontologica.Controller;
 
-import BackEndProyecto.ClinicaOdontologica.model.Paciente;
+import BackEndProyecto.ClinicaOdontologica.exception.ResourceNotFoundException;
+import BackEndProyecto.ClinicaOdontologica.entity.Paciente;
 import BackEndProyecto.ClinicaOdontologica.service.PacienteService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/paciente")
@@ -38,7 +38,7 @@ public class PacienteController {
     @PutMapping
     public ResponseEntity<String> actualizarPaciente(@RequestBody Paciente paciente) {
         //Necesitamos primeramente validar si existe o no
-        Paciente pacienteBuscado = pacienteService.buscarPaciente(paciente.getId());
+        Optional<Paciente> pacienteBuscado = pacienteService.buscarPaciente(paciente.getId());
         if (pacienteBuscado != null) {
             pacienteService.actualizarPaciente(paciente);
             return ResponseEntity.ok().body("Paciente actualizado con exito");
@@ -53,17 +53,18 @@ public class PacienteController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Paciente> buscarPaciente(@PathVariable int id) {
+    public ResponseEntity<Paciente> buscarPaciente(@PathVariable Long id) {
         return ResponseEntity.ok(pacienteService.buscarPaciente(id));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminarPaciente(@PathVariable int id) {
-        Paciente pacienteBuscado = pacienteService.buscarPaciente(id);
+    public ResponseEntity<String> eliminarPaciente(@PathVariable Long id) throws ResourceNotFoundException {
+        Optional<Paciente> pacienteBuscado = pacienteService.buscarPaciente(id);
         if (pacienteBuscado != null) {
             pacienteService.eliminarPaciente(id);
-            return ResponseEntity.ok().body("Paciente eliminado con exito");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("paciente eliminado con exito");
+        } else {
+            throw new ResourceNotFoundException("No existe ese id :"+ id);
         }
-        return ResponseEntity.badRequest().body("Paciente no encontrado");
     }
 }

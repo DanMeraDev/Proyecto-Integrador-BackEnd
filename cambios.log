@@ -9,7 +9,7 @@ INSERT INTO PACIENTES (NOMBRE, APELLIDO, CEDULA, FECHA_INGRESO, DOMICILIO_ID, EM
 [2024-05-27 20:30:09] [ INFO ] [PacienteDAOH2:58] iniciando la busqueda de un paciente por id: 1
 [2024-05-27 20:30:09] [ INFO ] [PacienteDAOH2:84] iniciando la operacion de actualizar del paciente: Daniel
 [2024-05-27 20:30:09] [ INFO ] [DomicilioDaoH2:67] Actualizando Domicilio: Domicilio{id=null, calle='Calle falsa', numero=1122334555, localidad='Ecuador', provincia='Pichincha'}
-[2024-05-27 20:30:09] [ WARN ] [PacienteDAOH2:100] Cannot invoke "java.lang.Integer.intValue()" because the return value of "BackEndProyecto.ClinicaOdontologica.model.Domicilio.getId()" is null
+[2024-05-27 20:30:09] [ WARN ] [PacienteDAOH2:100] Cannot invoke "java.lang.Integer.intValue()" because the return value of "BackEndProyecto.ClinicaOdontologica.entity.Domicilio.getId()" is null
 [2024-05-27 20:34:06] [ INFO ] [BD:30] tabla creada con exito
 [2024-05-27 20:34:11] [ INFO ] [PacienteDAOH2:112] iniciando la busqueda de todos los pacientes
 [2024-05-27 20:36:04] [ INFO ] [BD:30] tabla creada con exito
@@ -548,24 +548,24 @@ Syntax error in SQL statement "INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELL
 INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES ('ABC10', 'CAROL', 'VELEZ'),('ABC20', 'ADRIANA', 'ROMERO') +INSERT INTO TURNOS (PACIENTE_ID, ODONTOLOGO_ID, FECHA_TURNO) VALUES ('1', '1', '2025-03-12'),('2', '2', '2021-12-12') [42000-224]
 [2024-06-02 20:26:52] [ INFO ] [BD:38] tabla creada con exito
 [2024-06-02 20:27:12] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
-[2024-06-02 20:27:12] [ WARN ] [TurnosDaoLista:127] Cannot invoke "BackEndProyecto.ClinicaOdontologica.model.Turno.getPaciente()" because "turno" is null
+[2024-06-02 20:27:12] [ WARN ] [TurnosDaoLista:127] Cannot invoke "BackEndProyecto.ClinicaOdontologica.entity.Turno.getPaciente()" because "turno" is null
 [2024-06-02 20:32:00] [ INFO ] [BD:38] tabla creada con exito
 [2024-06-02 20:32:04] [ INFO ] [OdontologoDaoH2:97] iniciando las operaciones de buscar todos los odontólgos 
 [2024-06-02 20:32:14] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
 [2024-06-02 20:40:06] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
 [2024-06-02 20:40:27] [ INFO ] [PacienteDAOH2:120] iniciando la busqueda de todos los pacientes
 [2024-06-02 20:46:19] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
-[2024-06-02 20:46:19] [ WARN ] [TurnosDaoLista:127] Cannot invoke "BackEndProyecto.ClinicaOdontologica.model.Turno.getPaciente()" because "turno" is null
+[2024-06-02 20:46:19] [ WARN ] [TurnosDaoLista:127] Cannot invoke "BackEndProyecto.ClinicaOdontologica.entity.Turno.getPaciente()" because "turno" is null
 [2024-06-02 20:47:47] [ INFO ] [BD:38] tabla creada con exito
 [2024-06-02 20:47:52] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
-[2024-06-02 20:47:52] [ WARN ] [TurnosDaoLista:128] Cannot invoke "BackEndProyecto.ClinicaOdontologica.model.Turno.getPaciente()" because "turno" is null
+[2024-06-02 20:47:52] [ WARN ] [TurnosDaoLista:128] Cannot invoke "BackEndProyecto.ClinicaOdontologica.entity.Turno.getPaciente()" because "turno" is null
 [2024-06-02 20:48:25] [ INFO ] [BD:38] tabla creada con exito
 [2024-06-02 20:48:35] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
-[2024-06-02 20:48:35] [ WARN ] [TurnosDaoLista:128] Cannot invoke "BackEndProyecto.ClinicaOdontologica.model.Turno.getPaciente()" because "turno" is null
+[2024-06-02 20:48:35] [ WARN ] [TurnosDaoLista:128] Cannot invoke "BackEndProyecto.ClinicaOdontologica.entity.Turno.getPaciente()" because "turno" is null
 [2024-06-02 20:49:03] [ INFO ] [BD:38] tabla creada con exito
 [2024-06-02 20:49:06] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
 [2024-06-02 20:49:06] [ INFO ] [TurnosDaoLista:118] turnos buscados correctamente
-[2024-06-02 20:49:06] [ WARN ] [TurnosDaoLista:128] Cannot invoke "BackEndProyecto.ClinicaOdontologica.model.Turno.getPaciente()" because "turno" is null
+[2024-06-02 20:49:06] [ WARN ] [TurnosDaoLista:128] Cannot invoke "BackEndProyecto.ClinicaOdontologica.entity.Turno.getPaciente()" because "turno" is null
 [2024-06-02 20:50:13] [ INFO ] [BD:38] tabla creada con exito
 [2024-06-02 20:50:18] [ INFO ] [TurnosDaoLista:108] iniciando la operación de buscar todos los turnos
 [2024-06-02 20:50:18] [ INFO ] [TurnosDaoLista:118] turnos buscados correctamente

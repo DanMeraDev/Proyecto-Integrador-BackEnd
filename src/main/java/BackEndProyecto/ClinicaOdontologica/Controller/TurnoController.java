@@ -1,6 +1,6 @@
 package BackEndProyecto.ClinicaOdontologica.Controller;
 
-import BackEndProyecto.ClinicaOdontologica.model.Turno;
+import BackEndProyecto.ClinicaOdontologica.entity.Turno;
 import BackEndProyecto.ClinicaOdontologica.service.OdontologoService;
 import BackEndProyecto.ClinicaOdontologica.service.PacienteService;
 import BackEndProyecto.ClinicaOdontologica.service.TurnoService;
