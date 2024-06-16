@@ -1,7 +1,7 @@
 package BackEndProyecto.ClinicaOdontologica.Controller;
 
 import BackEndProyecto.ClinicaOdontologica.dao.OdontologoDaoH2;
-import BackEndProyecto.ClinicaOdontologica.model.Odontologo;
+import BackEndProyecto.ClinicaOdontologica.entity.Odontologo;
 import BackEndProyecto.ClinicaOdontologica.service.OdontologoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/odontologos")
 public class OdontologoController {
-    private OdontologoService odontologoService;
+    private final OdontologoService odontologoService;
 
     public OdontologoController() {
         odontologoService= new OdontologoService();

@@ -1,30 +1,31 @@
 package BackEndProyecto.ClinicaOdontologica.service;
 
-import BackEndProyecto.ClinicaOdontologica.dao.OdontologoDaoH2;
-import BackEndProyecto.ClinicaOdontologica.dao.iDao;
-import BackEndProyecto.ClinicaOdontologica.model.Odontologo;
+
+import BackEndProyecto.ClinicaOdontologica.entity.Odontologo;
+import BackEndProyecto.ClinicaOdontologica.repository.OdontologoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Optional;
 
 public class OdontologoService{
-    private iDao<Odontologo> odontologoiDao;
+    @Autowired
+    public OdontologoRepository odontologoRepository;
 
-    public OdontologoService() {
-        odontologoiDao= new OdontologoDaoH2();
-    }
+
     public Odontologo guardarOdontologo(Odontologo odontologo){
-        return odontologoiDao.guardar(odontologo);
+        return odontologoRepository.save(odontologo);
     }
-    public Odontologo buscarPorId(Integer id){
-        return odontologoiDao.buscarPorID(id);
+    public Optional<Odontologo> buscarPorId(Long id){
+        return odontologoRepository.findById(id);
     }
     public List<Odontologo> buscarOdontologos() {
-        return odontologoiDao.buscarTodos();
+        return odontologoRepository.findAll();
     }
     public void actualizarOdontologo(Odontologo odontologo) {
-        odontologoiDao.actualizar(odontologo);
+        odontologoRepository.save(odontologo);
     }
-    public void eliminarOdontologo(int id) {
-        odontologoiDao.eliminar(id);
+    public void eliminarOdontologo(Long id) {
+        odontologoRepository.deleteById(id);
     }
 }

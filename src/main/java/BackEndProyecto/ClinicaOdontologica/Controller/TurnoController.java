@@ -1,6 +1,6 @@
 package BackEndProyecto.ClinicaOdontologica.Controller;
 
-import BackEndProyecto.ClinicaOdontologica.model.Turno;
+import BackEndProyecto.ClinicaOdontologica.entity.Turno;
 import BackEndProyecto.ClinicaOdontologica.service.OdontologoService;
 import BackEndProyecto.ClinicaOdontologica.service.PacienteService;
 import BackEndProyecto.ClinicaOdontologica.service.TurnoService;
@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/turnos")
 public class TurnoController {
-    private TurnoService turnoService;
+    private final TurnoService turnoService;
 
     public TurnoController() {
         turnoService = new TurnoService();
@@ -31,8 +31,14 @@ public class TurnoController {
     public ResponseEntity<List<Turno>> listarTodosLosTurnos() {
         return  ResponseEntity.ok(turnoService.listarTurnos());
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Turno> buscarTurno(@PathVariable int id) {
+        return ResponseEntity.ok(turnoService.buscarPorID(id));
+    }
+
     @PutMapping
-    public ResponseEntity<String> actualizarTurno(Turno turno) {
+    public ResponseEntity<String> actualizarTurno(@RequestBody Turno turno) {
         Turno turnoBusqueda = turnoService.buscarPorID(turno.getId());
         if(turnoBusqueda!=null) {
             turnoService.actualizarTurno(turno);
@@ -40,8 +46,8 @@ public class TurnoController {
         }
         return ResponseEntity.badRequest().body("Turno no encontrado");
     }
-    @DeleteMapping
-    public ResponseEntity<String> eliminarTurno(int id) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> eliminarTurno(@PathVariable int id) {
         Turno turnoBusqueda = turnoService.buscarPorID(id);
         if(turnoBusqueda!=null) {
             turnoService.eliminarTurno(id);

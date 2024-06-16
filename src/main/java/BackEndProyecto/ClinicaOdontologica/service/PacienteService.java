@@ -1,35 +1,33 @@
 package BackEndProyecto.ClinicaOdontologica.service;
 
-import BackEndProyecto.ClinicaOdontologica.model.Paciente;
-import BackEndProyecto.ClinicaOdontologica.dao.PacienteDAOH2;
-import BackEndProyecto.ClinicaOdontologica.dao.iDao;
-import BackEndProyecto.ClinicaOdontologica.model.Paciente;
+import BackEndProyecto.ClinicaOdontologica.entity.Paciente;
+import BackEndProyecto.ClinicaOdontologica.repository.PacienteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Optional;
 
 public class PacienteService {
     //relacion de asociacion directa con el DAO
-    private iDao<Paciente> pacienteiDao;
+    @Autowired
+    private PacienteRepository pacienteRepository;
 
-    public PacienteService() {
-        pacienteiDao= new PacienteDAOH2();
-    }
     public Paciente guardarPaciente(Paciente paciente){
-        return pacienteiDao.guardar(paciente);
+        return pacienteRepository.save(paciente);
     }
-    public Paciente buscarPaciente(Integer id){
-        return pacienteiDao.buscarPorID(id);
+    public Optional<Paciente> buscarPaciente(Long id){
+        return pacienteRepository.findById(id);
     }
     public List<Paciente> buscarTodos(){
-        return pacienteiDao.buscarTodos();
+        return pacienteRepository.findAll();
     }
-    public Paciente buscarPorCorreo(String correo){
-        return pacienteiDao.buscarPorString(correo);
-    }
+//    public Paciente buscarPorCorreo(String correo){
+//        return pacienteRepository.findBy(correo);
+//    }
     public void actualizarPaciente(Paciente paciente){
-        pacienteiDao.actualizar(paciente);
+        pacienteRepository.save(paciente);
     }
-    public void eliminarPaciente(Integer id){
-        pacienteiDao.eliminar(id);
+    public void eliminarPaciente(Long id){
+        pacienteRepository.deleteById(id);
     }
 }

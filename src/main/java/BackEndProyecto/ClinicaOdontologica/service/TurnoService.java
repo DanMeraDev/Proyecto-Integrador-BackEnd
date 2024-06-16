@@ -1,30 +1,29 @@
 package BackEndProyecto.ClinicaOdontologica.service;
 
-import BackEndProyecto.ClinicaOdontologica.dao.TurnosDaoLista;
-import BackEndProyecto.ClinicaOdontologica.dao.iDao;
-import BackEndProyecto.ClinicaOdontologica.model.Turno;
+import BackEndProyecto.ClinicaOdontologica.entity.Turno;
+import BackEndProyecto.ClinicaOdontologica.repository.TurnosRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.Optional;
 
 public class TurnoService {
-    private iDao<Turno> turnoiDao;
+    @Autowired
+    public TurnosRepository turnosRepository;
 
-    public TurnoService() {
-        turnoiDao = new TurnosDaoLista();
-    }
     public Turno guardarTurno(Turno turno) {
-        return turnoiDao.guardar(turno);
+        return turnosRepository.save(turno);
     }
-    public Turno buscarPorID(int id) {
-        return turnoiDao.buscarPorID(id);
+    public Optional<Turno> buscarPorID(Long id) {
+        return turnosRepository.findById(id);
     }
     public List<Turno> listarTurnos() {
-        return turnoiDao.buscarTodos();
+        return turnosRepository.findAll();
     }
     public void actualizarTurno(Turno turno) {
-        turnoiDao.actualizar(turno);
+        turnosRepository.save(turno);
     }
-    public void eliminarTurno(int id) {
-        turnoiDao.eliminar(id);
+    public void eliminarTurno(Long id) {
+        turnosRepository.deleteById(id);
     }
 }

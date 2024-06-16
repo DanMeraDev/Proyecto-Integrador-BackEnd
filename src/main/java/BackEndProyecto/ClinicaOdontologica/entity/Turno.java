@@ -1,30 +1,21 @@
-package BackEndProyecto.ClinicaOdontologica.model;
+package BackEndProyecto.ClinicaOdontologica.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 
+@Entity
+@Table(name = "turnos")
 public class Turno {
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private Paciente paciente;
     private Odontologo odontologo;
     private LocalDate fecha;
 
 
-    public Turno() {
-    }
-
-    public Turno(Integer id, Paciente paciente, Odontologo odontologo, LocalDate fecha) {
-        this.id = id;
-        this.paciente = paciente;
-        this.odontologo = odontologo;
-        this.fecha = fecha;
-    }
-
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -40,7 +31,7 @@ public class Turno {
         this.fecha = fecha;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
