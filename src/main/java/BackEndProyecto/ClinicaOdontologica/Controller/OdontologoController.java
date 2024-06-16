@@ -1,12 +1,12 @@
 package BackEndProyecto.ClinicaOdontologica.Controller;
 
-import BackEndProyecto.ClinicaOdontologica.dao.OdontologoDaoH2;
 import BackEndProyecto.ClinicaOdontologica.entity.Odontologo;
 import BackEndProyecto.ClinicaOdontologica.service.OdontologoService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/odontologos")
@@ -21,7 +21,7 @@ public class OdontologoController {
         return ResponseEntity.ok(odontologoService.guardarOdontologo(odontologo));
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Odontologo> buscarOdontologoPorId(@PathVariable Integer id){
+    public ResponseEntity<Optional<Odontologo>> buscarOdontologoPorId(@PathVariable Long id){
         return ResponseEntity.ok(odontologoService.buscarPorId(id));
     }
 
@@ -32,8 +32,8 @@ public class OdontologoController {
 
     @PutMapping
     public ResponseEntity<String> actualizarOdontologo(@RequestBody Odontologo odontologo) {
-        Odontologo odontologoBusqueda = odontologoService.buscarPorId(odontologo.getId());
-        if (odontologoBusqueda!=null) {
+        Optional<Odontologo> odontologoBusqueda = odontologoService.buscarPorId(odontologo.getId());
+        if (odontologoBusqueda.isPresent()) {
             odontologoService.actualizarOdontologo(odontologo);
             return ResponseEntity.ok().body("Se actualizó correctamente");
         }
@@ -42,9 +42,9 @@ public class OdontologoController {
 
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminarOdontologo(@PathVariable int id) {
-        Odontologo odontologoBusqueda = odontologoService.buscarPorId(id);
-        if(odontologoBusqueda!=null){
+    public ResponseEntity<String> eliminarOdontologo(@PathVariable Long id) {
+        Optional<Odontologo> odontologoBusqueda = odontologoService.buscarPorId(id);
+        if(odontologoBusqueda.isPresent()){
             odontologoService.eliminarOdontologo(id);
             return ResponseEntity.ok().body("Odontólogo eliminado exitosamente");
         }

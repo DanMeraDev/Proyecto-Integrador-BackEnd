@@ -1,10 +1,21 @@
 package BackEndProyecto.ClinicaOdontologica.entity;
 
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "domicilios")
 public class Domicilio {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     private String calle;
+    @Column
     private Integer numero;
+    @Column
     private String localidad;
+    @Column
     private String provincia;
 
 

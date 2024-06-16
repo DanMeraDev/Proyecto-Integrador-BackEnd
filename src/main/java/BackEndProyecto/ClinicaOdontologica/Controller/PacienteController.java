@@ -39,7 +39,7 @@ public class PacienteController {
     public ResponseEntity<String> actualizarPaciente(@RequestBody Paciente paciente) {
         //Necesitamos primeramente validar si existe o no
         Optional<Paciente> pacienteBuscado = pacienteService.buscarPaciente(paciente.getId());
-        if (pacienteBuscado != null) {
+        if (pacienteBuscado.isPresent()) {
             pacienteService.actualizarPaciente(paciente);
             return ResponseEntity.ok().body("Paciente actualizado con exito");
         }
@@ -53,7 +53,7 @@ public class PacienteController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Paciente> buscarPaciente(@PathVariable Long id) {
+    public ResponseEntity<Optional<Paciente>> buscarPaciente(@PathVariable Long id) {
         return ResponseEntity.ok(pacienteService.buscarPaciente(id));
     }
 
@@ -61,7 +61,7 @@ public class PacienteController {
     public ResponseEntity<String> eliminarPaciente(@PathVariable Long id) throws ResourceNotFoundException {
         Optional<Paciente> pacienteBuscado = pacienteService.buscarPaciente(id);
 
-        if (pacienteBuscado != null) {
+        if (pacienteBuscado.isPresent()) {
             pacienteService.eliminarPaciente(id);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("paciente eliminado con exito");
         } else {

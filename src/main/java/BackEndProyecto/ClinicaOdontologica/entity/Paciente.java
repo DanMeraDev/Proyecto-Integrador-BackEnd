@@ -14,6 +14,8 @@ public class Paciente {
     private String apellido;
     private String cedula;
     private LocalDate fechaIngreso;
+    @ManyToOne
+    @JoinColumn(name = "domicilio_id")
     private Domicilio domicilio;
     private String email;
 

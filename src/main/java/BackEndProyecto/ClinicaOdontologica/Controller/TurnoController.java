@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/turnos")
@@ -22,7 +23,7 @@ public class TurnoController {
     public ResponseEntity<Turno> guardarTurno(@RequestBody Turno turno) {
         PacienteService pacienteService = new PacienteService();
         OdontologoService odontologoService = new OdontologoService();
-        if(pacienteService.buscarPaciente(turno.getPaciente().getId())!=null && odontologoService.buscarPorId(turno.getOdontologo().getId())!=null) {
+        if(pacienteService.buscarPaciente(turno.getPaciente().getId()).isPresent() && odontologoService.buscarPorId(turno.getOdontologo().getId()).isPresent()) {
             return ResponseEntity.ok(turnoService.guardarTurno(turno));
         }
         return ResponseEntity.badRequest().build();
@@ -33,23 +34,23 @@ public class TurnoController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Turno> buscarTurno(@PathVariable int id) {
+    public ResponseEntity<Optional<Turno>> buscarTurno(@PathVariable Long id) {
         return ResponseEntity.ok(turnoService.buscarPorID(id));
     }
 
     @PutMapping
     public ResponseEntity<String> actualizarTurno(@RequestBody Turno turno) {
-        Turno turnoBusqueda = turnoService.buscarPorID(turno.getId());
-        if(turnoBusqueda!=null) {
+        Optional<Turno> turnoBusqueda = turnoService.buscarPorID(turno.getId());
+        if(turnoBusqueda.isPresent()) {
             turnoService.actualizarTurno(turno);
             return ResponseEntity.ok().body("Turno actualizado con éxito");
         }
         return ResponseEntity.badRequest().body("Turno no encontrado");
     }
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> eliminarTurno(@PathVariable int id) {
-        Turno turnoBusqueda = turnoService.buscarPorID(id);
-        if(turnoBusqueda!=null) {
+    public ResponseEntity<String> eliminarTurno(@PathVariable Long id) {
+        Optional<Turno> turnoBusqueda = turnoService.buscarPorID(id);
+        if(turnoBusqueda.isPresent()) {
             turnoService.eliminarTurno(id);
             return ResponseEntity.ok().body("Turno eliminado con éxito");
         }
