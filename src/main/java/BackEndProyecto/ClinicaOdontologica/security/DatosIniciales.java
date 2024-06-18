@@ -22,8 +22,10 @@ public class DatosIniciales implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
         String passSinCifrar="admin";
         String passCifrado = bCryptPasswordEncoder.encode(passSinCifrar);
-        Usuario usuario = new Usuario("Daniel", "dan32", "dm375211@gmail.com", passCifrado, UsuarioRole.ROLE_ADMIN);
-        System.out.println("pass cifrado: " + passCifrado);
+        Usuario usuario = new Usuario("Daniel", "user", "dm375211@gmail.com", bCryptPasswordEncoder.encode("user"), UsuarioRole.ROLE_USER);
+        Usuario admin = new Usuario("Daniel", "admin", "dm375211@gmail.com", passCifrado, UsuarioRole.ROLE_ADMIN);
         usuarioRepository.save(usuario);
+        usuarioRepository.save(admin);
     }
+
 }
