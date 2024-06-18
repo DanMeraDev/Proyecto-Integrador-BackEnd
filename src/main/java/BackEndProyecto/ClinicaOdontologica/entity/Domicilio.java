@@ -17,9 +17,12 @@ public class Domicilio {
     private String localidad;
     @Column
     private String provincia;
-    @OneToMany(mappedBy = "domicilio", cascade = CascadeType.ALL)
-    private Paciente paciente;
+//    @OneToMany(mappedBy = "domicilio", cascade = CascadeType.ALL)
+//    private Paciente paciente;
 
+
+    public Domicilio() {
+    }
 
     public Long getId() {
         return id;
