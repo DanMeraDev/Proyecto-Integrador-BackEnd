@@ -36,8 +36,8 @@ public class ConfigWebSecurity {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests((authz) -> authz
-                .requestMatchers("/post_pacientes.html").hasRole("USER")
-                        .requestMatchers("/post_odontologos.html", "/get_odontologos.html").hasRole("ADMIN")
+                .requestMatchers("/post_turnos.html").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers("/post_odontologos.html", "/get_odontologos.html", "/post_pacientes.html", "/get_pacientes.html","/get_turnos.html").hasRole("ADMIN")
                 .anyRequest().authenticated()).formLogin(withDefaults())
                 .logout(withDefaults());
         return http.build();
