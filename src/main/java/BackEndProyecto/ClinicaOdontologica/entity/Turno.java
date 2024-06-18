@@ -18,6 +18,9 @@ public class Turno {
     private LocalDate fecha;
 
 
+    public Turno() {
+    }
+
     public void setId(Long id) {
         this.id = id;
     }

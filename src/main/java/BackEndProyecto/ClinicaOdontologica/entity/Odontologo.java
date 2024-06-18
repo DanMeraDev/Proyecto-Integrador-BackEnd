@@ -13,6 +13,8 @@ public class Odontologo {
     private String nombre;
     private String apellido;
 
+    public Odontologo() {
+    }
 
     public Long getId() {
         return id;

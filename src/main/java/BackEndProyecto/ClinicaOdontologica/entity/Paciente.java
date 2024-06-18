@@ -10,15 +10,19 @@ public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column
     private String nombre;
+    @Column
     private String apellido;
+    @Column
     private String cedula;
+    @Column
     private LocalDate fechaIngreso;
     @ManyToOne
     @JoinColumn(name = "domicilio_id")
     private Domicilio domicilio;
+    @Column
     private String email;
-
 
     public Long getId() {
         return id;
