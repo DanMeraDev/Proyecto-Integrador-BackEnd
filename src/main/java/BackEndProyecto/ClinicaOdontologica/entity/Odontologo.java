@@ -13,6 +13,20 @@ public class Odontologo {
     private String nombre;
     private String apellido;
 
+
+    public Odontologo(String apellido, String nombre, String matricula) {
+        this.apellido = apellido;
+        this.nombre = nombre;
+        this.matricula = matricula;
+    }
+
+    public Odontologo(Long id, String matricula, String nombre, String apellido) {
+        this.id = id;
+        this.matricula = matricula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
     public Odontologo() {
     }
 
