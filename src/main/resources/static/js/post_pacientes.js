@@ -13,7 +13,11 @@ window.addEventListener('load', function () {
             apellido: document.querySelector('#apellido').value,
             cedula: document.querySelector('#cedula').value,
             fechaIngreso: document.querySelector('#fechaIngreso').value,
-            domicilio: document.querySelector('#domicilio').value,
+            // domicilio: document.querySelector('#domicilio').value,
+            calle: document.querySelector('#calle').value,
+            numero: document.querySelector('#numero').value,
+            localidad: document.querySelector('#localidad').value,
+            provincia: document.querySelector('#provincia').value,
             email: document.querySelector('#email').value,
         };
         //invocamos utilizando la función fetch la API peliculas con el método POST que guardará
@@ -60,7 +64,10 @@ window.addEventListener('load', function () {
         document.querySelector('#apellido').value = "";
         document.querySelector('#cedula').value = "";
         document.querySelector('#fechaIngreso').value = "";
-        document.querySelector('#domicilio').value = "";
+        document.querySelector('#calle').value = "";
+        document.querySelector('#numero').value = "";
+        document.querySelector('#localidad').value = "";
+        document.querySelector('#provincia').value = "";
         document.querySelector('#email').value = "";
 
     }
