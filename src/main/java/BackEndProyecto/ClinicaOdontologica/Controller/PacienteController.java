@@ -3,6 +3,7 @@ package BackEndProyecto.ClinicaOdontologica.Controller;
 import BackEndProyecto.ClinicaOdontologica.exception.ResourceNotFoundException;
 import BackEndProyecto.ClinicaOdontologica.entity.Paciente;
 import BackEndProyecto.ClinicaOdontologica.service.PacienteService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,11 +14,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/paciente")
 public class PacienteController {
-    private final PacienteService pacienteService;
-
-    public PacienteController() {
-        pacienteService= new PacienteService();
-    }
+    @Autowired
+    private PacienteService pacienteService;
 
 
 //    @GetMapping

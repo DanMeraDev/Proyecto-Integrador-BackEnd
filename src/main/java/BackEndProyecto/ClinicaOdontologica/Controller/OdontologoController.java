@@ -2,6 +2,8 @@ package BackEndProyecto.ClinicaOdontologica.Controller;
 
 import BackEndProyecto.ClinicaOdontologica.entity.Odontologo;
 import BackEndProyecto.ClinicaOdontologica.service.OdontologoService;
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +13,11 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/odontologos")
 public class OdontologoController {
-    private final OdontologoService odontologoService;
+    @Autowired
+    private OdontologoService odontologoService;
+    private static final Logger logger = Logger.getLogger(OdontologoController.class);
 
-    public OdontologoController() {
-        odontologoService= new OdontologoService();
-    }
+
     @PostMapping
     public ResponseEntity<Odontologo> registrarUnOdontologo(@RequestBody Odontologo odontologo){
         return ResponseEntity.ok(odontologoService.guardarOdontologo(odontologo));

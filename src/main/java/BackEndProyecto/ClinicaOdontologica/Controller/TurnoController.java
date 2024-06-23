@@ -1,9 +1,12 @@
 package BackEndProyecto.ClinicaOdontologica.Controller;
 
+import BackEndProyecto.ClinicaOdontologica.entity.Odontologo;
+import BackEndProyecto.ClinicaOdontologica.entity.Paciente;
 import BackEndProyecto.ClinicaOdontologica.entity.Turno;
 import BackEndProyecto.ClinicaOdontologica.service.OdontologoService;
 import BackEndProyecto.ClinicaOdontologica.service.PacienteService;
 import BackEndProyecto.ClinicaOdontologica.service.TurnoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,17 +16,20 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/turnos")
 public class TurnoController {
-    private final TurnoService turnoService;
-
-    public TurnoController() {
-        turnoService = new TurnoService();
-    }
+    @Autowired
+    private TurnoService turnoService;
+    @Autowired
+    private PacienteService pacienteService;
+    @Autowired
+    private OdontologoService odontologoService;
 
     @PostMapping
     public ResponseEntity<Turno> guardarTurno(@RequestBody Turno turno) {
-        PacienteService pacienteService = new PacienteService();
-        OdontologoService odontologoService = new OdontologoService();
-        if(pacienteService.buscarPaciente(turno.getPaciente().getId()).isPresent() && odontologoService.buscarPorId(turno.getOdontologo().getId()).isPresent()) {
+        Optional<Paciente> pacienteAux = pacienteService.buscarPaciente(turno.getPaciente().getId());
+        Optional<Odontologo> odontologoAux = odontologoService.buscarPorId(turno.getPaciente().getId());
+        if(pacienteAux.isPresent() && odontologoAux.isPresent()) {
+            turno.setPaciente(pacienteAux.get());
+            turno.setOdontologo(odontologoAux.get());
             return ResponseEntity.ok(turnoService.guardarTurno(turno));
         }
         return ResponseEntity.badRequest().build();

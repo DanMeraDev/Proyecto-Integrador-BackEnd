@@ -21,9 +21,6 @@ public class Domicilio {
     @Column
     private String provincia;
 
-    @OneToMany(mappedBy = "domicilio", cascade = CascadeType.ALL)
-    private List<Paciente> pacientes = new ArrayList<>();
-
 
 
     public Domicilio(Long id, String calle, Integer numero, String localidad, String provincia, List<Paciente> pacientes) {
@@ -32,26 +29,16 @@ public class Domicilio {
         this.numero = numero;
         this.localidad = localidad;
         this.provincia = provincia;
-        this.pacientes = pacientes;
     }
 
-    public Domicilio(String calle, Integer numero, String localidad, String provincia, List<Paciente> pacientes) {
+    public Domicilio(String calle, Integer numero, String localidad, String provincia) {
         this.calle = calle;
         this.numero = numero;
         this.localidad = localidad;
         this.provincia = provincia;
-        this.pacientes = pacientes;
     }
 
     public Domicilio() {
-    }
-
-    public List<Paciente> getPacientes() {
-        return pacientes;
-    }
-
-    public void setPacientes(List<Paciente> pacientes) {
-        this.pacientes = pacientes;
     }
 
     public Long getId() {
