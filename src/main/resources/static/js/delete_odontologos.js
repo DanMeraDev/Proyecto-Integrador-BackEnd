@@ -11,7 +11,7 @@ function deleteOdontologoBy(id)
           .then(response => response.json())
 
           //borrar la fila de la pelicula eliminada
-          let row_id = "#tr_" + id;
+          let row_id = id;
           document.querySelector(row_id).remove();
 
 }

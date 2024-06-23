@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
                     var table = document.getElementById("pacienteTable");
                     var pacienteRow =table.insertRow();
                     let tr_id = paciente.id;
-                    paciente.id = tr_id;
+                    pacienteRow.id = tr_id;
 
                     //por cada pelicula creamos un boton delete que agregaremos en cada fila para poder eliminar la misma
                     //dicho boton invocara a la funcion de java script deleteByKey que se encargará
