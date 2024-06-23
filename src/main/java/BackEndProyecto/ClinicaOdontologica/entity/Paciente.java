@@ -18,10 +18,10 @@ public class Paciente {
     private String cedula;
     @Column
     private LocalDate fechaIngreso;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "domicilio_id", referencedColumnName = "id")
     private Domicilio domicilio;
-    @Column
+    @Column(unique = true, nullable = false)
     private String email;
 
     public Paciente(Long id, String nombre, String apellido, String cedula, LocalDate fechaIngreso, Domicilio domicilio, String email) {

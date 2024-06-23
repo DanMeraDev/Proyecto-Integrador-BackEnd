@@ -3,6 +3,7 @@ package BackEndProyecto.ClinicaOdontologica.entity;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 @Entity
 @Table(name = "turnos")
@@ -10,11 +11,11 @@ public class Turno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "paciente_id", referencedColumnName = "id")
     private Paciente paciente;
-    @ManyToOne
-    @JoinColumn(name = "odontologs_id", referencedColumnName = "id")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "odontologo_id", referencedColumnName = "id")
     private Odontologo odontologo;
     private LocalDate fecha;
 
