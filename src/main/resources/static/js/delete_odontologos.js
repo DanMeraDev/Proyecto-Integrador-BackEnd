@@ -1,5 +1,6 @@
-function deleteBy(id)
+function deleteOdontologoBy(id)
 {
+          console.log("Entró xd")
           //con fetch invocamos a la API de peliculas con el método DELETE
           //pasandole el id en la URL
           const url = '/odontologos/'+ id;

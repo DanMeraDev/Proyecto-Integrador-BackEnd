@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
             //de llamar a la API para eliminar una pelicula
             let deleteButton = '<button' +
                                       ' id=' + '\"' + 'btn_delete_' + odontologo.id + '\"' +
-                                      ' type="button" onclick="deleteBy('+odontologo.id+')" class="btn btn-danger btn_delete">' +
+                                      ' type="button" onclick="deleteOdontologoBy('+odontologo.id+')" class="btn btn-danger btn_delete">' +
                                       '&times' +
                                       '</button>';
 
@@ -35,16 +35,16 @@ window.addEventListener('load', function () {
             //modificar y mostrar los datos de la misma en un formulario.
             let updateButton = '<button' +
                                       ' id=' + '\"' + 'btn_id_' + odontologo.id + '\"' +
-                                      ' type="button" onclick="findBy('+odontologo.id+')" class="btn btn-info btn_id">' +
+                                      ' type="button" onclick="findOdontologoBy('+odontologo.id+')" class="btn btn-info btn_id">' +
                                       odontologo.id +
                                       '</button>';
-
+            console.log("estoy aqui xd ")
             //armamos cada columna de la fila
             //como primer columna pondremos el boton modificar
             //luego los datos de la pelicula
             //como ultima columna el boton eliminar
             odontologoRow.innerHTML = '<td>' + updateButton + '</td>' +
-                    '<td class=\"td_matricula\">' + odontologo.matricula.toUpperCase() + '</td>' +
+                    '<td class=\"td_matricula\">' + odontologo.matricula + '</td>' +
                     '<td class=\"td_nombre\">' + odontologo.nombre.toUpperCase() + '</td>' +
                     '<td class=\"td_apellido\">' + odontologo.apellido.toUpperCase() + '</td>' +
                     '<td>' + deleteButton + '</td>';
@@ -61,5 +61,5 @@ window.addEventListener('load', function () {
       }
     })
 
-
     })
+

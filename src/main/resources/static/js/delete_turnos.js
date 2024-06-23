@@ -1,4 +1,4 @@
-function deleteBy(id)
+function deleteTurnoBy(id)
 {
           //con fetch invocamos a la API de peliculas con el método DELETE
           //pasandole el id en la URL

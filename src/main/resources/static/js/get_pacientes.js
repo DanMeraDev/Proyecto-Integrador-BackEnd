@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
                     //de llamar a la API para eliminar una pelicula
                     let deleteButton = '<button' +
                         ' id=' + '\"' + 'btn_delete_' + paciente.id + '\"' +
-                        ' type="button" onclick="deleteBy('+paciente.id+')" class="btn btn-danger btn_delete">' +
+                        ' type="button" onclick="deletePacienteBy('+paciente.id+')" class="btn btn-danger btn_delete">' +
                         '&times' +
                         '</button>';
 
@@ -34,7 +34,7 @@ window.addEventListener('load', function () {
                     //modificar y mostrar los datos de la misma en un formulario.
                     let updateButton = '<button' +
                         ' id=' + '\"' + 'btn_id_' + paciente.id + '\"' +
-                        ' type="button" onclick="findBy('+paciente.id+')" class="btn btn-info btn_id">' +
+                        ' type="button" onclick="findPacienteBy('+paciente.id+')" class="btn btn-info btn_id">' +
                         paciente.id +
                         '</button>';
 

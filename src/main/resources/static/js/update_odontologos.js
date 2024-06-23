@@ -12,7 +12,7 @@ window.addEventListener('load', function () {
         //a diferencia de una pelicula nueva en este caso enviamos el id
         //para poder identificarla y modificarla para no cargarla como nueva
         const formData = {
-            id: 1,
+            id: document.querySelector("#odontologo_id").value,
             matricula: document.querySelector('#matricula').value,
             nombre: document.querySelector('#nombre').value,
             apellido: document.querySelector('#apellido').value,
@@ -30,7 +30,7 @@ window.addEventListener('load', function () {
             body: JSON.stringify(formData)
         }
           fetch(url,settings)
-          .then(response => response.json())
+                .then(response => response.json())
 
     })
  })
@@ -38,7 +38,9 @@ window.addEventListener('load', function () {
     //Es la funcion que se invoca cuando se hace click sobre el id de una pelicula del listado
     //se encarga de llenar el formulario con los datos de la pelicula
     //que se desea modificar
-    function findBy(id) {
+    function findOdontologoBy(id) {
+              console.log("Entró xd")
+
           const url = '/odontologos'+"/"+id;
           const settings = {
               method: 'GET'

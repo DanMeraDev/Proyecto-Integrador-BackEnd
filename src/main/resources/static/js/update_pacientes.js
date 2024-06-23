@@ -50,7 +50,9 @@ window.addEventListener('load', function () {
 //Es la funcion que se invoca cuando se hace click sobre el id de una pelicula del listado
 //se encarga de llenar el formulario con los datos de la pelicula
 //que se desea modificar
-function findBy(id) {
+function findPacienteBy(id) {
+              console.log("Entró xd")
+
     const url = '/paciente'+"/"+id;
     const settings = {
         method: 'GET'
