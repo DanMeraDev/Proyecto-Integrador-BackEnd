@@ -9731,3 +9731,17 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+.floating-btn {
+  position: fixed;
+  top: 20%;
+  right: 40%;
+  z-index: 1000;
+}
+.floating-btn .alert {
+  margin-bottom: 0;
+}
+
+.floating-btn .close {
+  color: white;
+}

@@ -18,14 +18,14 @@ window.addEventListener('load', function () {
                     var table = document.getElementById("pacienteTable");
                     var pacienteRow =table.insertRow();
                     let tr_id = paciente.id;
-                    paciente.id = tr_id;
+                    pacienteRow.id = tr_id;
 
                     //por cada pelicula creamos un boton delete que agregaremos en cada fila para poder eliminar la misma
                     //dicho boton invocara a la funcion de java script deleteByKey que se encargará
                     //de llamar a la API para eliminar una pelicula
                     let deleteButton = '<button' +
                         ' id=' + '\"' + 'btn_delete_' + paciente.id + '\"' +
-                        ' type="button" onclick="deleteBy('+paciente.id+')" class="btn btn-danger btn_delete">' +
+                        ' type="button" onclick="deletePacienteBy('+paciente.id+')" class="btn btn-danger btn_delete">' +
                         '&times' +
                         '</button>';
 
@@ -34,7 +34,7 @@ window.addEventListener('load', function () {
                     //modificar y mostrar los datos de la misma en un formulario.
                     let updateButton = '<button' +
                         ' id=' + '\"' + 'btn_id_' + paciente.id + '\"' +
-                        ' type="button" onclick="findBy('+paciente.id+')" class="btn btn-info btn_id">' +
+                        ' type="button" onclick="findPacienteBy('+paciente.id+')" class="btn btn-info btn_id">' +
                         paciente.id +
                         '</button>';
 

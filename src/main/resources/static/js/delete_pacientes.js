@@ -1,4 +1,4 @@
-function deleteBy(id)
+function deletePacienteBy(id)
 {
     //con fetch invocamos a la API de pacientes con el método DELETE
     //pasandole el id en la URL
@@ -10,7 +10,8 @@ function deleteBy(id)
         .then(response => response.json())
 
     //borrar la fila del paciente eliminada
-    let row_id = "#tr_" + id;
+    let row_id = id;
     document.querySelector(row_id).remove();
+
 
 }
