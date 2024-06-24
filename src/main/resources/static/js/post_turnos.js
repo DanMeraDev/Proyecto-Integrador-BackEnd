@@ -9,10 +9,13 @@ window.addEventListener('load', function () {
 
        //creamos un JSON que tendrá los datos de la nueva película
         const formData = {
-            matricula: document.querySelector('#matricula').value,
-            nombre: document.querySelector('#nombre').value,
-            apellido: document.querySelector('#apellido').value,
-
+            paciente: {
+                id: document.querySelector('#paciente_id').value
+            },
+            odontologo: {
+                id: document.querySelector('#odontologo_id').value
+            },
+            fecha: document.querySelector('#fecha_turno').value
         };
         //invocamos utilizando la función fetch la API peliculas con el método POST que guardará
         //la película que enviaremos en formato JSON
@@ -54,9 +57,9 @@ window.addEventListener('load', function () {
 
 
     function resetUploadForm(){
-        document.querySelector('#matricula').value = "";
-        document.querySelector('#nombre').value = "";
-         document.querySelector('#apellido').value = "";
+        document.querySelector('#paciente_id').value = "";
+        document.querySelector('#odontologo_id').value = "";
+         document.querySelector('#fecha_turno').value = "";
 
     }
 

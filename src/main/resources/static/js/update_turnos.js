@@ -1,3 +1,4 @@
+
 window.addEventListener('load', function () {
 
 
@@ -6,16 +7,19 @@ window.addEventListener('load', function () {
     const formulario = document.querySelector('#update_turno_form');
 
     formulario.addEventListener('submit', function (event) {
+        event.preventDefault();
         let turnoId = document.querySelector('#turno_id').value;
-        console.log(turnoId)
         //creamos un JSON que tendrá los datos de la película
         //a diferencia de una pelicula nueva en este caso enviamos el id
         //para poder identificarla y modificarla para no cargarla como nueva
+
+        let pacienteAcutalizado =  await findPBy(document.querySelector("#paciente_id").value);
+        let odontologoAcutalizado =  await findOBy(document.querySelector("#odontologo_id").value);
         const formData = {
-            id: 1,
-            matricula: document.querySelector('#matricula').value,
-            nombre: document.querySelector('#nombre').value,
-            apellido: document.querySelector('#apellido').value,
+            id: turnoId,
+            paciente: pacienteAcutalizado,
+            odontologo: odontologoAcutalizado,
+            fecha: document.querySelector('#fecha_turno').value,
 
         };
 
@@ -33,6 +37,7 @@ window.addEventListener('load', function () {
           .then(response => response.json())
 
     })
+
  })
 
     //Es la funcion que se invoca cuando se hace click sobre el id de una pelicula del listado
@@ -48,12 +53,69 @@ window.addEventListener('load', function () {
           .then(data => {
               let turno = data;
               document.querySelector('#turno_id').value = turno.id;
-              document.querySelector('#matricula').value = turno.matricula;
-              document.querySelector('#nombre').value = turno.nombre;
-              document.querySelector('#apellido').value = turno.apellido;
+              document.querySelector('#paciente_id').value = turno.paciente.id;
+              document.querySelector('#odontologo_id').value = turno.odontologo.id;
+              document.querySelector('#fecha_turno').value = turno.fecha;
               //el formulario por default esta oculto y al editar se habilita
               document.querySelector('#div_turno_updating').style.display = "block";
           }).catch(error => {
               alert("Error: " + error);
           })
       }
+
+    function findPBy(id) {
+      let pacienteData = {};
+      const url = '/paciente'+"/"+id;
+      const settings = {
+          method: 'GET'
+      }
+      fetch(url,settings)
+          .then(response => response.json())
+          .then(data => {
+            console.log(data)
+            let paciente = data;
+            pacienteData = {
+                id: paciente.id,
+                nombre: paciente.nombre,
+                apellido: paciente.apellido,
+                cedula: paciente.cedula,
+                fechaIngreso: paciente.fechaIngreso,
+                domicilio: {
+                    id: paciente.domicilio.id,
+                    calle: paciente.domicilio.calle,
+                    numero: paciente.domicilio.numero,
+                    localidad: paciente.domicilio.localidad,
+                    provincia: paciente.domicilio.provincia,
+                },
+                email: paciente.email
+              }
+
+      }).catch(error => {
+        alert("Paciente error: "+error)
+      })
+      return pacienteData;
+    }
+
+    function findOBy(id) {
+          let odontologoData = {};
+          const url = '/odontologos'+"/"+id;
+          const settings = {
+              method: 'GET'
+          }
+          fetch(url,settings)
+              .then(response => response.json())
+              .then(data => {
+                console.log(data)
+                let odontologo = data;
+                odontologoData = {
+                    id: odontologo.id,
+                    matricula: odontologo.matricula,
+                    nombre: odontologo.nombre,
+                    apellido: odontologo.apellido
+                 }
+
+          }).catch(error => {
+            alert("Odontologo error: " + error)
+          })
+          return odontologoData;
+        }
