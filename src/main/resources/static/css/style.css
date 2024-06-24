@@ -9738,6 +9738,9 @@ textarea.form-control {
   right: 40%;
   z-index: 1000;
 }
+.floating-btn .alert {
+  margin-bottom: 0;
+}
 
 .floating-btn .close {
   color: white;
