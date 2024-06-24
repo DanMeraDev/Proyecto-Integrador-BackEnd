@@ -6,6 +6,7 @@ window.addEventListener('load', function () {
 
     //Ante un submit del formulario se ejecutará la siguiente funcion
     formulario.addEventListener('submit', function (event) {
+        event.preventDefault();
 
        //creamos un JSON que tendrá los datos de la nueva película
         const formData = {
@@ -30,25 +31,40 @@ window.addEventListener('load', function () {
             .then(data => {
                  //Si no hay ningun error se muestra un mensaje diciendo que la pelicula
                  //se agrego bien
-                 let successAlert = '<div class="alert alert-success alert-dismissible">' +
-                     '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                     '<strong></strong> Odontologo agregada </div>'
-                 document.querySelector('#response').innerHTML = successAlert;
-                 document.querySelector('#response').style.display = "block";
-                 resetUploadForm();
+                let successAlert = '<div class="alert alert-success">' +
+                    '<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>' +
+                    '<span class="glyphicon glyphicon-ok"></span> <strong>Odontólogo agregado</strong>' +
+                    '<hr class="message-inner-separator">' +
+                    '<p>Se agregó correctamente al odontólogo</p>' +
+                    '</div>';
+                document.querySelector('#response').innerHTML = successAlert;
+                document.querySelector('#response').style.display = "block";
+                resetUploadForm();
+                setTimeout(() => {
+                    document.querySelector('#response').style.display = "none";
+                }, 2000); 
 
             })
             .catch(error => {
                     //Si hay algun error se muestra un mensaje diciendo que la pelicula
                     //no se pudo guardar y se intente nuevamente
-                    let errorAlert = '<div class="alert alert-danger alert-dismissible">' +
-                                     '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                                     '<strong> Error intente nuevamente</strong> </div>'
+                    let errorAlert = '<div>' +
+                        '<div class="alert alert-warning alert-dismissible">' +
+                            '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                            '<span class="glyphicon glyphicon-record"></span> <strong>Odontólogo no agregado</strong>' +
+                            '<hr class="message-inner-separator">' +
+                            '<p>Ocurrió un error al agregar al odontólogo</p>' +
+                        '</div>' +
+                    '</div>';
 
-                      document.querySelector('#response').innerHTML = errorAlert;
-                      document.querySelector('#response').style.display = "block";
+                    document.querySelector('#response').innerHTML = errorAlert;
+                    document.querySelector('#response').style.display = "block";
                      //se dejan todos los campos vacíos por si se quiere ingresar otra pelicula
-                     resetUploadForm();})
+                    resetUploadForm();
+                    setTimeout(() => {
+                        document.querySelector('#response').style.display = "none";
+                    }, 2000); 
+                    })
     });
 
 
